@@ -1,4 +1,4 @@
 package com.tests.groups;
 
-public interface Deep {
+public interface Deep extends All {
 }

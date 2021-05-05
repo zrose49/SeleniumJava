@@ -1,4 +1,4 @@
 package com.tests.groups;
 
-public interface Smoke {
+public interface Smoke extends All{
 }

@@ -11,6 +11,7 @@
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
+        <groups>tests.groups.Smoke</groups>
     </properties>
 
     <dependencies>
@@ -72,6 +73,7 @@
                 <configuration>
                     <parallel>methods</parallel>
                     <threadCount>40</threadCount>
+                    <groups>${groups}</groups>
                 </configuration>
                 <version>2.22.0</version>
             </plugin>
