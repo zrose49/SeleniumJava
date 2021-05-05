@@ -12,6 +12,8 @@ import pageobjects.Login;
 
 import static com.pageobjects.core.ConstantsHeroSite.*;
 import static org.junit.Assert.*;
+import org.junit.experimental.categories.Category;
+import com.tests.groups.Smoke;
 
 public class TestLoginHeroSite extends BaseTest {
 
@@ -23,12 +25,14 @@ public class TestLoginHeroSite extends BaseTest {
     }
 
     @Test
+    @Category(Smoke.class)
     public void verifySuccessfulLogin() {
         login.with(USERNAME, PASSWORD);
         Assert.assertTrue("Success message not present",login.successMessagePresent());
     }
 
     @Test
+    @Category(Smoke.class)
     public void verifyFailedLogin() {
         login.with(USERNAME,"testfail");
         Assert.assertTrue("Failure message not present",login.failureMessagePresent());
